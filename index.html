@@ -38,7 +38,7 @@
 
         header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             padding-bottom: 20px;
             border-bottom: 2px solid var(--primary-color);
         }
@@ -52,14 +52,6 @@
         header p {
             font-size: 1.1em;
             color: #666;
-        }
-
-        .hero-image {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         section {
@@ -85,23 +77,18 @@
         }
 
         ul {
-            list-style-type: none;
-            padding: 0;
+            list-style-type: disc; /* استخدام نقط عادية بدلاً من تماثيل */
+            padding-right: 20px; /* مسافة داخلية للنقاط */
             margin-bottom: 20px;
         }
 
         ul li {
-            background-color: #fff;
-            margin-bottom: 10px;
-            padding: 12px 15px;
-            border-radius: 5px;
-            border-right: 4px solid var(--accent-color);
-            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease-in-out;
+            margin-bottom: 8px;
+            padding: 5px 0; /* تقليل البادينج */
         }
-
-        ul li:hover {
-            transform: translateX(-5px);
+        
+        ul li a {
+            font-weight: normal; /* جعل الخط عادي للروابط داخل القوائم */
         }
 
         a {
@@ -116,22 +103,22 @@
             text-decoration: underline;
         }
 
-        .download-button {
+        .download-link {
             display: inline-block;
             background-color: var(--secondary-color);
             color: #fff;
-            padding: 12px 25px;
+            padding: 10px 20px;
             border-radius: 5px;
             text-align: center;
-            margin-top: 15px;
-            font-size: 1.1em;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+            margin-top: 10px;
+            margin-left: 10px; /* لتباعد الأزرار */
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* إزالة خط التسطير */
         }
 
-        .download-button:hover {
+        .download-link:hover {
             background-color: #218838; /* لون أغمق عند التحويم */
-            transform: translateY(-2px);
             text-decoration: none;
         }
 
@@ -141,6 +128,7 @@
             margin-top: 10px;
             padding-right: 10px;
             border-right: 3px solid var(--accent-color);
+            margin-bottom: 20px;
         }
 
         footer {
@@ -150,44 +138,6 @@
             border-top: 1px solid var(--border-color);
             color: #777;
             font-size: 0.9em;
-        }
-
-        /* تحسينات للتفاعلية (باستخدام JavaScript لاحقاً) */
-        .accordion-header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 15px;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-
-        .accordion-header:hover {
-            background-color: #0056b3;
-        }
-
-        .accordion-header .icon {
-            font-size: 1.2em;
-            transition: transform 0.3s ease;
-        }
-
-        .accordion-content {
-            padding: 0 15px;
-            background-color: #fefefe;
-            border-left: 3px solid var(--primary-color);
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-        }
-
-        .accordion-content.active {
-            max-height: 1000px; /* قيمة كبيرة لضمان عرض المحتوى بالكامل */
-            padding: 15px;
         }
 
         /* Responsive Design */
@@ -204,6 +154,12 @@
             section h2 {
                 font-size: 1.6em;
             }
+
+            .download-link {
+                display: block; /* لجعل الأزرار تحت بعضها في الشاشات الصغيرة */
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
         }
     </style>
 </head>
@@ -213,11 +169,6 @@
             <h1><span style="color: var(--secondary-color);">دليلك الشامل لـ</span> الأدوية التي تصرف بدون وصفة طبية (OTC)</h1>
             <p>مرحباً بك! هذا المقال سيقدم لك دليلاً شاملاً حول الأدوية التي لا تحتاج إلى وصفة طبية. سنستعرض معاً الجوانب النظرية والعملية لهذه الأدوية، مع توفير ملفات PDF قيمة تساعدك على فهمها واستخدامها بشكل صحيح.</p>
         </header>
-
-        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhaj99yxBF510C_yGEuDmJIoG4SCVdd3Yq3edIHb1iYVkfnofy2EH7AWV0KLFD5ypxeiH0sSBF8ehuXuYM88mzqYkiKSIsroTtjrtcgdJzyIH2y428Z2n8BRkI10_TgSmh9pStdf8y9m_gjgEFOjaomP_l13fhBua0dh-Toc9sD1U8RKRVQScCzZoAOt12D=w400-h295" 
-             alt="أدوية بدون وصفة طبية" 
-             title="الأدوية التي تصرف بدون وصفة طبية pdf" 
-             class="hero-image">
 
         <section>
             <h2>لماذا تزداد أهمية الأدوية التي تصرف بدون وصفة طبية؟</h2>
@@ -235,105 +186,56 @@
             <p>لقد جمعنا لك ملفات شاملة مقسمة لتغطية الجانبين النظري والعملي لأدوية الـ OTC.</p>
 
             <h3>القسم الأول: الجانب النظري والمعلومات الأساسية</h3>
-            <div class="accordion-item">
-                <div class="accordion-header">
-                    <span>اضغط لعرض تفاصيل القسم الأول</span>
-                    <span class="icon">+</span>
-                </div>
-                <div class="accordion-content">
-                    <p>هذا القسم مقسم إلى جزأين، يغطي الأول مواضيع عامة تتعلق بتصنيف الأدوية التي تصرف بدون وصفة طبية، بينما يشمل الجزء الثاني شرحاً مفصلاً لبعض أدوية OTC.</p>
-                    <h4>أبرز العناوين التي يتناولها هذا القسم:</h4>
-                    <ul>
-                        <li><a href="https://www.doctorhypo.me/2021/07/meaning-of-otc.html" target="_blank">معنى أدوية OTC</a>: تعريف شامل ومبسط.</li>
-                        <li>نبذة مبسطة عن الأدوية التي تصرف بدون وصفة طبية.</li>
-                        <li>مميزات <a href="https://www.doctorhypo.me/2022/04/otc-drugs-pdf.html" target="_blank">OTC Drugs</a>: ما الذي يجعل هذه الأدوية خياراً جذاباً؟</li>
-                        <li>عيوب تلك الأدوية.</li>
-                        <li>العناصر المفصلة لـ الأدوية التي تصرف بدون وصفة طبية.</li>
-                        <li>تنظيم أدوية الـ OTC.</li>
-                    </ul>
-                    <h4>كما يضم الجزء الثاني من هذا القسم شرحاً خفيفاً للجانب العملي، ويشمل:</h4>
-                    <ul>
-                        <li>Tylenol</li>
-                        <li>OTCs & Pregnancy</li>
-                        <li>OTCs & Driving</li>
-                        <li>OTC Drug Categories</li>
-                        <li>Laxatives</li>
-                        <li><a href="https://www.doctorhypo.me/2022/01/Types-of-analgesics-and-their-uses-pdf.html" target="_blank">المسكنات</a> (Pain Killers)</li>
-                        <li>Weight loss OTC drugs</li>
-                        <li>OTC Drugs References</li>
-                        <li><a href="https://www.doctorhypo.me/2022/03/Misuse-of-medicines-pdf.html" target="_blank">سوء استخدام الأدوية</a> (Misuse & Abuse of OTC Drugs)</li>
-                        <li>CNS Stimulants</li>
-                        <li>Ephedrine</li>
-                        <li>Role of the Clinician</li>
-                    </ul>
-                    <div class="file-details">
-                        <p><strong>تفاصيل الملفات:</strong></p>
-                        <p>الملف الأول: 47 صفحة، بحجم 1.2 ميجابايت.</p>
-                        <p>الملف الثاني: 24 صفحة، بحجم 5.4 ميجابايت.</p>
-                    </div>
-                    <p><strong>روابط التحميل (القسم الأول):</strong></p>
-                    <a href="https://drive.google.com/file/d/1k-_KVOK29uxLN6cbFNDGBEyuGgNVRXsU/view?usp=sharing" target="_blank" rel="nofollow" class="download-button">تحميل الملف الأول</a>
-                    <a href="https://drive.google.com/file/d/1uReflEQ9xZwjGwU3JUfSXeophc_L5bw9/view?usp=sharing" target="_blank" rel="nofollow" class="download-button">تحميل الملف الثاني</a>
-                </div>
+            <p>هذا القسم مقسم إلى جزأين، يغطي الأول مواضيع عامة تتعلق بتصنيف الأدوية التي تصرف بدون وصفة طبية، بينما يشمل الجزء الثاني شرحاً مفصلاً لبعض أدوية OTC.</p>
+            <h4>أبرز العناوين التي يتناولها هذا القسم:</h4>
+            <ul>
+                <li><a href="https://www.doctorhypo.me/2021/07/meaning-of-otc.html" target="_blank">معنى أدوية OTC</a></li>
+                <li>نبذة مبسطة عن الأدوية التي تصرف بدون وصفة طبية</li>
+                <li>مميزات <a href="https://www.doctorhypo.me/2022/04/otc-drugs-pdf.html" target="_blank">OTC Drugs</a></li>
+                <li>عيوب تلك الأدوية</li>
+                <li>العناصر المفصلة لـ الأدوية التي تصرف بدون وصفة طبية</li>
+                <li>تنظيم أدوية الـ OTC</li>
+            </ul>
+            <h4>كما يضم الجزء الثاني من هذا القسم شرحاً خفيفاً للجانب العملي، ويشمل:</h4>
+            <ul>
+                <li>Tylenol</li>
+                <li>OTCs &amp; Pregnancy</li>
+                <li>OTCs &amp; Driving</li>
+                <li>OTC drug Categories</li>
+                <li>Laxatives</li>
+                <li><a href="https://www.doctorhypo.me/2022/01/Types-of-analgesics-and-their-uses-pdf.html" target="_blank">المسكنات</a> (Pain Killers)</li>
+                <li>Weight loss OTC drugs</li>
+                <li>OTC Drugs References</li>
+                <li><a href="https://www.doctorhypo.me/2022/03/Misuse-of-medicines-pdf.html" target="_blank">سوء استخدام الأدوية</a> (Misuse &amp; Abuse of OTC drugs)</li>
+                <li>CNS Stimulants</li>
+                <li>Ephedrine</li>
+                <li>Role of the Clinician</li>
+            </ul>
+            <div class="file-details">
+                <p><strong>تفاصيل الملفات:</strong></p>
+                <p>الملف الأول: 47 صفحة، بحجم 1.2 ميجابايت.</p>
+                <p>الملف الثاني: 24 صفحة، بحجم 5.4 ميجابايت.</p>
             </div>
+            <p><strong>روابط التحميل (القسم الأول):</strong></p>
+            <a href="https://drive.google.com/file/d/1k-_KVOK29uxLN6cbFNDGBEyuGgNVRXsU/view?usp=sharing" target="_blank" rel="nofollow" class="download-link">تحميل الملف الأول</a>
+            <a href="https://drive.google.com/file/d/1uReflEQ9xZwjGwU3JUfSXeophc_L5bw9/view?usp=sharing" target="_blank" rel="nofollow" class="download-link">تحميل الملف الثاني</a>
+        </section>
 
+        <section>
             <h3>القسم الثاني: الجانب العملي والحالات الشائعة</h3>
-            <div class="accordion-item">
-                <div class="accordion-header">
-                    <span>اضغط لعرض تفاصيل القسم الثاني</span>
-                    <span class="icon">+</span>
-                </div>
-                <div class="accordion-content">
-                    <p>يقدم هذا الملف العملي مجموعة من أشهر الحالات التي قد تواجه الأطباء والصيادلة، مع تقديم العلاج المناسب وملاحظات هامة حول هذه الحالات. يتميز هذا الملف بتركيزه على الشرح العملي المبسط، بعيداً عن التعقيد النظري.</p>
-                    <div class="file-details">
-                        <p><strong>تفاصيل الملف:</strong></p>
-                        <p>47 صفحة، بحجم 1.7 ميجابايت.</p>
-                        <p>مكتوب بمزيج من اللغتين العربية والإنجليزية لتسهيل الفهم والاستيعاب.</p>
-                    </div>
-                    <p><strong>رابط التحميل (الملف العملي):</strong></p>
-                    <a href="https://drive.google.com/file/d/1SWpfqU3zCD_c40FtA5GJ-sbjefgIhx4I/view?usp=sharing" target="_blank" rel="nofollow" class="download-button">تحميل الملف العملي</a>
-                </div>
+            <p>يأتي هذا الملف، الأدوية التي تصرف بدون وصفة طبية pdf، ليقدم عددًا من أشهر الحالات التي ستقابل الأطباء أو الصيادلة، مع تقديم العلاج المناسب وبعض الملاحظات الهامة حول تلك الحالات. يمتاز بخلوه من الكلام النظري والاقتصار على الشرح العملي البسيط.</p>
+            <div class="file-details">
+                <p><strong>تفاصيل الملف:</strong></p>
+                <p>تضمن الملف محتواه في 47 صفحة، بحجم 1.7 ميجابايت.</p>
+                <p>بخلاف ملفات القسم الأول؛ فقد تمت صياغة محتواه بمزيج بين العربية والإنجليزية، مما يجعله يمتاز ببعض السهولة عنها.</p>
             </div>
+            <p><strong>تحميل الملف العملي لشرح الأدوية التي تصرف بدون وصفة طبية pdf:</strong></p>
+            <a href="https://drive.google.com/file/d/1SWpfqU3zCD_c40FtA5GJ-sbjefgIhx4I/view?usp=sharing" target="_blank" rel="nofollow" class="download-link">اضغط هنا للتحميل</a>
         </section>
 
         <footer>
             <p>&copy; 2024 جميع الحقوق محفوظة. نأمل أن تكون هذه الملفات مفيدة لك.</p>
         </footer>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const accordionHeaders = document.querySelectorAll('.accordion-header');
-
-            accordionHeaders.forEach(header => {
-                header.addEventListener('click', function() {
-                    const content = this.nextElementSibling;
-                    const icon = this.querySelector('.icon');
-
-                    // Toggle active class on content
-                    content.classList.toggle('active');
-
-                    // Toggle icon
-                    if (content.classList.contains('active')) {
-                        icon.textContent = '-';
-                    } else {
-                        icon.textContent = '+';
-                    }
-
-                    // Close other open accordions
-                    accordionHeaders.forEach(otherHeader => {
-                        if (otherHeader !== this) {
-                            const otherContent = otherHeader.nextElementSibling;
-                            const otherIcon = otherHeader.querySelector('.icon');
-                            if (otherContent.classList.contains('active')) {
-                                otherContent.classList.remove('active');
-                                otherIcon.textContent = '+';
-                            }
-                        }
-                    });
-                });
-            });
-        });
-    </script>
 </body>
 </html>
